@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'walle'
+
+android {
+//    compileSdkVersion rootProject.ext.compileSdkVersion
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "com.today.news"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true//加上这行即可
+            }
+        }
+
+    }
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/toutiao.jks")
+                storePassword "you4580"
+                keyAlias "you4580"
+                keyPassword "you4580"
+//                v2SigningEnabled false
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+
+//        debug {
+//            try {
+//                storeFile file("./keystore/toutiao.jks")
+//                storePassword "you4580!"
+//                keyAlias "you4580"
+//                keyPassword "you4580"
+////                v2SigningEnabled false
+//            } catch (ex) {
+//                throw new InvalidUserDataException(ex.toString())
+//            }
+//        }
+    }
+
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        //目录结构设置
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', '.apt_generated']
+            aidl.srcDirs = ['src/main/aidl', '.apt_generated']
+            assets.srcDirs = ['src/main/assets']
+            res.srcDirs =
+                    [
+                            'src/main/res/common',
+                            'src/main/res/home',
+                            'src/main/res/video',
+                            'src/main/res/micro',
+                            'src/main/res/photograph',
+                            'src/main/res/mine'
+                    ]//res 目录的拆分
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+    // 定制渠道包的APK的文件名称
+//    apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    apkFileNameFormat = '${packageName}-v${versionName}-${channel}.apk'
+    //configFile与channelFile两者必须存在一个，否则无法生成渠道包。两者都存在时优先执行configFile
+//    channelFile = new File("${project.getProjectDir()}/channel")
+    configFile = new File("${project.getProjectDir()}/config.json")
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:multidex:1.0.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile project(':uikit')
+    compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+//    compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:3.7.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'org.litepal.android:core:1.5.0'
+    compile project(':jcvideoplayer-lib')
+    compile project(':statusbar-lib')
+    compile 'com.github.chaychan:SlideCloseLib:1.0.0'
+    compile 'com.github.chaychan:MultipleItemRvAdapter:1.0.4'
+    implementation 'com.android.support:design:27.0.0'
+    compile 'com.meituan.android.walle:library:1.1.6'
+//    androidTestCompile('com.android.support:support-annotations:25.1.0') {
+//        force = true
+//    }
+}

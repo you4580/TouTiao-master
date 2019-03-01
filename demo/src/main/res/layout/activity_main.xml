@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eff2f5"
+    android:overScrollMode="never"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <!-- 头像 -->
+        <RelativeLayout
+            android:id="@+id/personal_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/product_live_back"
+            android:layout_gravity="center">
+        </RelativeLayout>
+
+        <!-- 兴趣选择 -->
+        <RelativeLayout
+            android:id="@+id/personal_select_channel"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dip"
+                android:gravity="center_vertical"
+                android:textSize="14.5sp"
+                android:textColor="#E89555"
+                android:text="选择你的兴趣，推荐更加精准，去选择 >>"
+                android:background="#FDF9EF"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/temp"/>
+
+            <ImageView
+                android:id="@+id/select_channel_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"/>
+        </RelativeLayout>
+
+        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />
+        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />
+        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />
+        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />        <!-- 我的消息 -->
+        <RelativeLayout
+            android:id="@+id/personal_my_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/personal_item_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/personal_msgs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/personal_msg_normal_icon" />
+
+            <TextView
+                android:id="@+id/personal_msgs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/personal_msgs_img"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="个人中心" />
+
+
+            <ImageView
+                android:id="@+id/personal_msgs_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_personal_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/colorAccent" />
+
+
+    </LinearLayout>
+</ScrollView>

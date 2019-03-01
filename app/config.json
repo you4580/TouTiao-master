@@ -1,0 +1,106 @@
+{
+  //extraInfo 不要出现以`channel`为key的情况
+  /*
+  不声明extraInfo的channel默认使用的extraInfo
+  如果没有此项则没有默认extraInfo
+  */
+  "defaultExtraInfo": {
+    "key2": "20170824",
+    "key": "20170824"
+  },
+  /*
+    strategy:
+     1. ifNone (默认适用此策略) : 仅当对应channel没有extraInfo时生效
+     2. always : 所有channel都生效，channel中extraInfo的key与defaultExtraInfo重复时，覆盖defaultExtraInfo中的内容。
+   */
+
+  //"defaultExtraInfoStrategy": "always",
+
+  "channelInfoList": [
+    {
+      "channel": "109",
+      // 此channel将使用自己声明的extraInfo
+      /*
+      此alias可以做到写入apk的channel是meituan，而打包时输出的文件名是美团
+      注意：alias不声明时，walle配置apkFileNameFormat中channel就是channel，否则为alias
+      */
+      "alias": "百度手机助手",
+      "extraInfo": {
+        "buildtime": "20170824",
+        "hash": "20170824"
+      }
+    },
+    {
+      "channel": "3",
+      "alias": "hiapk"
+    },
+    {
+      "channel": "110",
+      "alias": "91助手"
+    },
+    {
+      "channel": "106",
+      "alias": "360手机助手"
+    },
+    {
+      "channel": "102",
+      "alias": "腾讯应用宝"
+    },
+    {
+      "channel": "256",
+      "alias": "vivo"
+    },
+    {
+      "channel": "157",
+      "alias": "小米应用商店"
+    },
+    {
+      "channel": "219",
+      "alias": "OPPO可可商店"
+    },
+    {
+      "channel": "174",
+      "alias": "魅族Flyme"
+    },
+    {
+      "channel": "184",
+      "alias": "豌豆荚"
+    },
+    {
+      "channel": "121",
+      "alias": "PP助手"
+    },
+    {
+      "channel": "142",
+      "alias": "联想乐商店"
+    },
+    {
+      "channel": "230",
+      "alias": "三星应用商店"
+    },
+    {
+      "channel": "141",
+      "alias": "乐视应用商店"
+    },
+    {
+      "channel": "250",
+      "alias": "搜狗市场"
+    },
+    {
+      "channel": "7",
+      "alias": "华为智汇云"
+    },
+    {
+      "channel": "1",
+      "alias": "google"
+    },
+    {
+      "channel": "5",
+      "alias": "移动MM"
+    },
+    {
+      "channel": "2",
+      "alias": "安智"
+    }
+  ]
+}
